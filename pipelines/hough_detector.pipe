@@ -1,0 +1,58 @@
+# ================================================================
+process ia :: input_adapter
+
+# ================================================================
+process detector
+  :: image_object_detector
+  detector:type                    = hough_circle
+  detector:hough_circle:dp         = 1
+  detector:hough_circle:min_dist   = 100
+  detector:hough_circle:param1     = 200
+  detector:hough_circle:param2     = 100
+  detector:hough_circle:min_radius = 0
+  detector:hough_circle:max_radius = 0
+
+# ================================================================
+process draw
+  :: draw_detected_object_set
+  # select draw algorithm implementation
+  block  draw_algo
+    type = ocv
+    ocv:default_line_thickness = 3
+  endblock
+
+# ================================================================
+process disp
+  :: image_viewer
+  annotate_image = true
+  pause_time     = 5  #  pause_time in seconds.
+  title          = images
+#  footer         = images
+#  header         = header-header
+
+# ==================================================================
+process oa :: output_adapter
+
+# ================================================================
+# global pipeline config
+#
+config _pipeline:_edge
+       capacity = 2
+
+# ================================================================
+# connections
+connect from ia.image
+        to   detector.image
+
+connect from detector.detected_object_set
+        to   draw.detected_object_set
+connect from ia.image
+        to draw.image
+
+connect from draw.image
+        to   disp.image
+
+connect from detector.detected_object_set
+        to   oa.detected_object_set
+
+# -- end of file --

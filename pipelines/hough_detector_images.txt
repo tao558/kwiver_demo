@@ -1,0 +1,1 @@
+/home/tom.osika/kwiver/demo/images/soda_circles.jpg
