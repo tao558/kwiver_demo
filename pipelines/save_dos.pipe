@@ -1,0 +1,24 @@
+# ================================================================
+process ia :: input_adapter
+
+# ================================================================
+process dos_writer
+  :: detected_object_output
+  file_name = set_length_and_image_name.p
+  writer:type = DetectedObjectSetOutputBinary
+
+# ================================================================
+process oa :: output_adapter
+
+
+
+# connections
+connect from ia.detected_object_set
+        to   dos_writer.detected_object_set
+connect from ia.image_file_name
+        to   dos_writer.image_file_name
+
+connect from ia.detected_object_set
+        to   oa.detected_object_set
+
+# -- end of file --
