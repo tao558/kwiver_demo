@@ -5,7 +5,7 @@ A small repository with a demonstration of the Python functionality added / bein
 2. Providing an implementation for an abstract algorithm and registering with plugin loader. See instructions for this process below.
 3. An example of running an `embedded_pipeline` from `Python` using an `adapter_data_set`. Instructions for this are also below.
 
-## Registering an Algorithm Implementation with `plugin_loader`
+## Registering an Algorithm Implementation with `plugin_explorer`
 In this example, we define a custom implementation for the C++ algorithm `detected_object_set_output`, namely `DetectedObjectSetOutputBinary`.
 Registering an implementation is straightforward. Essentially, we'll create a Python package for the algorithm implementation and implement the
 `__vital_algorithm_register__` magic method to register it. Then we'll specify the entrypoint in a `setup.py` for our package, then pip install the package.
