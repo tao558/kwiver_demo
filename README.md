@@ -57,13 +57,13 @@ In the same directory as the root of our package, create a setup.py with the fol
 
 ```
 from setuptools import setup, find_packages
-setup( name='mypackage',
+setup( name='mypackagename',
        version="0.1.0",
        packages=find_packages(),
        entry_points={
                 'kwiver.python_plugin_registration':
                     [
-                        'demo_detected_object_set_output=.<implementation_file>', <TODO>
+                        'mypackage=mypackage.<implementation_file>',
                     ],
                 },
     )
