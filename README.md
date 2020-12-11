@@ -11,7 +11,7 @@ Registering an implementation is straightforward. Essentially, we'll create a Py
 `__vital_algorithm_register__` magic method to register it. Then we'll specify the entrypoint in a `setup.py` for our package, then pip install the package.
 
 
-### Creating a Python Package for the Algorithm Implementation.
+### 1. Creating a Python Package for the Algorithm Implementation.
 In this example, we have the package `demo_detected_object_set_output` which contains two files:
 
   * An empty `__init__.py` making the directory a Python package
@@ -19,10 +19,10 @@ In this example, we have the package `demo_detected_object_set_output` which con
   
 Create a Python package with a similar structure.
 
-### Filling Out the Source File
+### 2. Filling Out the Source File
 Algorithm implementations are subclasses in Python, just like in C++. Fill out the class definition and inherit from the algorithm you are implementing. Be sure to include the following line in the constructor, otherwise inheritance won't work properly with `Pybind11`:
 
-```
+``` a custom implementation for the C++ algorithm detected_object_set_output, namely DetectedObjectSetOutputBinary. Registering an implementation is straightforward. Essentially, we'll create a Python package for the algorithm implementation and implement the __vital_algorithm_register__ magic method to register it. Then we'll specify the entrypoint in a setup.py for our package, then pip install the package.
 def __init__(self):
         [ParentClass].__init__(self)
 ```
@@ -49,7 +49,7 @@ def __vital_algorithm_register__():
 
 Where `MyImplementation` is the Python implementation class. See `demo_detected_object_set_output/detected_object_set_output_binary.py` for an example.
 
-### Defining a `setup.py`
+### 3. Defining a `setup.py`
 
 In the same directory as the root of our package, create a setup.py with the following general structure
 
