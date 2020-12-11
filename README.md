@@ -2,8 +2,8 @@
 A small repository with a demonstration of the Python functionality added / being added to `KWIVER`. This demo includes:
 
 1. Example usage of a few `vital types`, namely `Image` and `Image Container`.
-2. An example of running an `embedded_pipeline` from `Python` using an `adapter_data_set`.
-3. Providing an implementation for an abstract algorithm and registering with plugin loader. See instructions for this process below.
+2. Providing an implementation for an abstract algorithm and registering with plugin loader. See instructions for this process below.
+3. An example of running an `embedded_pipeline` from `Python` using an `adapter_data_set`. Instructions for this are also below.
 
 ## Registering an Algorithm Implementation with `plugin_loader`
 In this example, we define a custom implementation for the C++ algorithm `detected_object_set_output`, namely `DetectedObjectSetOutputBinary`.
@@ -69,3 +69,5 @@ setup( name='mypackagename',
 
 Now `pip install -e .` from the same directory as the setup.py, and the algorithm implementation should be registered.
 
+## Running an Embedded Pipeline from Python
+The `Python` API for constructing / running an `embedded_pipeline` is very similar to the `C++` API. Pipeline files that work with C++ are also compatible with `Python`. 
