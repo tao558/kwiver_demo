@@ -6,13 +6,13 @@ A small repository with a demonstration of the Python functionality added / bein
 3. An example of running an `embedded_pipeline` from `Python` using an `adapter_data_set`. Instructions for this are also below.
 
 ## Run the Demo Locally
-1. Build the latest master branch of kwiver (be sure to source the `setup_kwiver` file).
-2. Download this repo anywhere on your machine
+1. Build this branch of kwiver: https://github.com/Kitware/kwiver/pull/1156 (this is only temporary until the PR is merged). Be sure to source the `setup_kwiver` file. Do not reset your environment, as the `setup_kwiver` file points to KWIVER's `Python` libraries.
+2. Download this repo anywhere on your machine.
 3. Run `pip install -e .` to install the `detected_object_set_output_binary` package.
 4. Run `python script.py`. The image downloaded in this demo should be temporarily displayed on-screen with bounding boxes around detected circles. 
 
 ## Run the Jupyter Notebook
-Follow steps 1-3 above, then from the root directory of the repository run `jupyter-notebook`. In your browser, navigate to the `kwiver_python_demo.ipynb`. At the top, click `Cell`, then `Run all`. The same image should stay on-screen, but the notebook will continue to run 5 seconds after displayed.
+Follow steps 1-3 above, then from the root directory of the repository run `jupyter-notebook`. In your browser, navigate to the `kwiver_python_demo.ipynb`. At the top, click `Cell`, then `Run all`. The same image should stay appear on-screen.
 
 ## Registering an Algorithm Implementation with `plugin_explorer`
 In this example, we define a custom implementation for the C++ algorithm `detected_object_set_output`, namely `DetectedObjectSetOutputBinary`.
