@@ -12,7 +12,7 @@ A small repository with a demonstration of the Python functionality added / bein
 4. Run `python script.py`. The image downloaded in this demo should be temporarily displayed on-screen with bounding boxes around detected circles. 
 
 ## Run the Jupyter Notebook
-Follow steps 1-3 above, then from the root directory of the repository run `jupyter-notebook`. In your browser, navigate to the `kwiver_python_demo.ipynb`. At the top, click `Cell`, then `Run all`. The same image should stay on-screen. Close the image when you would like the pipeline to continue.
+Follow steps 1-3 above, then from the root directory of the repository run `jupyter-notebook`. In your browser, navigate to the `kwiver_python_demo.ipynb`. At the top, click `Cell`, then `Run all`. The same image should stay appear on-screen.
 
 ## Registering an Algorithm Implementation with `plugin_explorer`
 In this example, we define a custom implementation for the C++ algorithm `detected_object_set_output`, namely `DetectedObjectSetOutputBinary`.
