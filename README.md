@@ -6,7 +6,7 @@ A small repository with a demonstration of the Python functionality added / bein
 3. An example of running an `embedded_pipeline` from `Python` using an `adapter_data_set`. Instructions for this are also below.
 
 ## Run the Demo Locally
-1. Build this branch of kwiver: https://github.com/Kitware/kwiver/pull/1156 (this is only temporary until the PR is merged). Be sure to source the `setup_kwiver` file. Do not reset your environment, as the `setup_kwiver` file points to KWIVER's `Python` libraries.
+1. Build the master branch of `KWIVER`. Be sure to source the `setup_kwiver` file. Do not reset your environment, as the `setup_kwiver` file points to KWIVER's `Python` libraries.
 2. Download this repo anywhere on your machine.
 3. Run `pip install -e .` to install the `detected_object_set_output_binary` package.
 4. Run `python script.py`. The image downloaded in this demo should be temporarily displayed on-screen with bounding boxes around detected circles. 
